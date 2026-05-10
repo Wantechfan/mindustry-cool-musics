@@ -1,5 +1,7 @@
 # Mindustry-Mod-Some-Musics
-Replaces some musics in game except boss1. If you like it, don't forget to leave a star on this repository.
+[![Badge Discord]][Discord]
+Replaces some musics in game except boss1. Request your music at the discord server above.
+
 # List of Musics That Changed
 1. menu = Kerosene Funk (by Crvvdy)
 2. game1 = Symbolism (by Electro-Light)
@@ -16,4 +18,6 @@ Replaces some musics in game except boss1. If you like it, don't forget to leave
 13. fine = Cloud 9 (by Itro & Tobu)
 14. editor = Aria Math (by C418)
 
-Request music or wanna report something? Tell me at [Mindustry discord](https://discord.com/channels/391020510269669376/1428283291357810800/1486773666787229776)
+<!--Blablabla bleble blublublu -->
+[Badge Discord]: https://img.shields.io/discord/1502200382347022346?style=for-the-badge&label=Dihcord%20Serfer
+[Discord]: https://discord.gg/rjQndaHGFu
