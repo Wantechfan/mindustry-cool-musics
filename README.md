@@ -1,7 +1,7 @@
-# Mindustry-Mod-Some-Musics
+# Cool Musics
 [![Badge Discord]][Discord]
 
-Replaces some musics in game except boss1. Request your music at the discord server above.
+Request your music at the discord server above.
 
 # List of Musics That Changed
 1. menu = Kerosene Funk (by Crvvdy)
