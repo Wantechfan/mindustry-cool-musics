@@ -1,7 +1,7 @@
 name: "cool-musics"
 displayName: "Cool Musics"
 author: "WantechFan"
-description: "Replaces every single musics ingame with some cool and nostalgic musics I took from YouTube. Please leave a star in the repository if you like it."
+description: "Replaces every single musics ingame with some musics I (And the community) got.\nRequest your musics on discord.gg/rjQndaHGFu and let the community decide if it's good or not to be added."
 version: "1.2.2"
 minGameVersion: "136"
 hidden: true
