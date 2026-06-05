@@ -12,5 +12,4 @@ jobs:
         uses: chase-roohms/discord-notify@v1
         with:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          username: "Cool Musics"
-          content: "Damn, **${{ github.event.sender.login }}** just starred Cool Musics!"
+          content: "Damn, **${{ github.event.sender.login }}** just starred ${{ github.repository }}! Tysm bro."
