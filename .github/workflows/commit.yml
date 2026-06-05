@@ -12,5 +12,4 @@ jobs:
         uses: chase-roohms/discord-notify@v1
         with:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          username: "Cool Musics"  # Write your custom name here
           content: "**${{ github.actor }}** somehow summoned a commit and threw it to **${{ github.repository }}**!\nCommit Link: https://github.com/${{ github.repository }}/commit/${{ github.sha }}\nMessage: ${{ github.event.head_commit.message }}"
