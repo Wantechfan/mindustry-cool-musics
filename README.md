@@ -1,3 +1,5 @@
+![icon](icon.png)
+
 # Cool Musics
 [![Badge Discord]][Discord]
 
