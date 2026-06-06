@@ -1,0 +1,15 @@
+name: Discord Comment Notif
+
+on:
+  issue_comment:
+    types: [created]
+    
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send custom Discord message
+        uses: chase-roohms/discord-notify@v1
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: "## New comment on ${{ github.event.issue.pull_request && 'pull request' || 'issue' }}: ${{ github.event.issue.title }} (#${{ github.event.issue.number }})\n**${{ github.actor }}:** ${{ github.event.comment.body }}\nLink: ${{ github.event.comment.html_url }}\n-# <@1393198962101456949> somenoe commented!"

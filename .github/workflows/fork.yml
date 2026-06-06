@@ -1,0 +1,14 @@
+name: Discord Fork Notif
+
+on:
+  fork
+  
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send custom Discord message
+        uses: chase-roohms/discord-notify@v1
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: "## **${{ github.actor }}** forked **${{ github.repository }}**!\nLink: ${{ github.event.forkee.html_url }}\n-# <@1393198962101456949> we got a fork."

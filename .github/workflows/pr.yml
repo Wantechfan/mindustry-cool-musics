@@ -1,0 +1,34 @@
+name: Discord Pr Notif
+
+on:
+  pull_request:
+    types: [opened, closed, reopened]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send custom Discord message
+        if: github.event.action == 'opened'
+        uses: chase-roohms/discord-notify@v1
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: "## ${{ github.actor }} pulled a request on ${{ github.repository }}!\nTitle: ${{ github.event.pull_request.title }}\nMessage: ${{ github.event.pull_request.body }}\nLink: ${{ github.event.pull_request.html_url }}\n-# <@1393198962101456949> someone pr-ed ${{ github.repository }}."
+      - name: Send custom Discord message
+        if: github.event.action == 'closed' && github.event.pull_request.merged == true
+        uses: chase-roohms/discord-notify@v1
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: "**${{ github.actor }} collided ${{ github.event.pull_request.title }} to the ${{ github.repository }}!**\ncongrats, ${{ github.event.pull_request.user.login }}, your pr got merged!\nLink: ${{ github.event.pull_request.html_url }}"
+      - name: Send custom Discord message
+        if: github.event.action == 'closed' && github.event.pull_request.merged == false
+        uses: chase-roohms/discord-notify@v1
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: "**${{ github.actor }} threw ${{ github.event.pull_request.title }} to the outer space!**\nMaybe next time, ${{ github.event.pull_request.user.login }}.\nLink: ${{ github.event.pull_request.html_url }}"
+      - name: Send custom Discord message
+        if: github.event.action == 'reopened'
+        uses: chase-roohms/discord-notify@v1
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: "**${{ github.actor }} respawned ${{ github.event.pull_request.title }} from the dead!**\n${{ github.event.pull_request.user.login }}, bro check it out!\nLink: ${{ github.event.pull_request.html_url }}"

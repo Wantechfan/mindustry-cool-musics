@@ -1,0 +1,29 @@
+name: Notify Discord on New Issue
+
+on:
+  issues:
+    types: [opened, closed, reopened]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send custom Discord message
+        if: github.event.action == 'opened'
+        uses: chase-roohms/discord-notify@v1
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: "## ${{ github.actor }} issued ${{ github.repository }}!\nMessage: ${{ github.event.issue.body }}\nLink: ${{ github.event.issue.html_url }}\n-# <@1393198962101456949> hey look an issue."
+      - name: Send custom Discord message
+        if: github.event.action == 'closed'
+        uses: chase-roohms/discord-notify@v1
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: "**${{ github.actor }} eradicated the issue ${{ github.event.issue.title }} with a firing squad!**\nLink: ${{ github.event.issue.html_url }}"
+      - name: Send custom Discord message
+        if: github.event.action == 'reopened'
+        uses: chase-roohms/discord-notify@v1
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: "**${{ github.actor }} respawned ${{ github.event.issue.title }} from the dead!**\nLink: ${{ github.event.issue.html_url }}"
+    

@@ -1,8 +1,8 @@
-name: Discord Custom Notification
+name: Discord Commit Notif
 
 on:
   push:
-    branches: [ main ]  # Triggers when code is pushed to the main branch
+    branches: [ main ]
 
 jobs:
   notify:
@@ -12,4 +12,4 @@ jobs:
         uses: chase-roohms/discord-notify@v1
         with:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          content: "**${{ github.actor }}** somehow summoned a commit and threw it to **${{ github.repository }}**!\nCommit Link: https://github.com/${{ github.repository }}/commit/${{ github.sha }}\nMessage: ${{ github.event.head_commit.message }}"
+          content: "**${{ github.actor }}** summoned a commit and threw it to **${{ github.repository }}**!\nCommit Link: https://github.com/${{ github.repository }}/commit/${{ github.sha }}\nMessage: ${{ github.event.head_commit.message }}"
