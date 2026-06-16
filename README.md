@@ -7,9 +7,9 @@ Request your music at the discord server above.
 
 # List of Musics That Changed
 1. menu = Kerosene Funk (by Crvvdy)
-2. game1 = Symbolism (by Electro-Light)
-3. game2 = Chess Beat (by Joyful)
-4. game3 = Dare (by Sayfalse)
+2. game1 = Ultimate Comrade Music You Should Hear.
+3. game2 = Ai Đưa Em Về (by TIA, requested by @copper_in_mindustry)
+4. game3 = Shiawese (by Dion Timmer, requested by @copper_in_mindustry)
 5. game4 = Kerosene (by Crystal Castles)
 6. game5 = Memory Reboot (by VØJ)
 7. game6 = Sweet Self Satisfaction (by Roccow)
