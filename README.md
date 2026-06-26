@@ -15,7 +15,7 @@ Request your music at the discord server above.
 7. game6 = Sweet Self Satisfaction (by Roccow)
 8. game7 = Dreiton in Piano (originally made by C418, pianized by Beniegenie, and recreated by me)
 9. game8 = Funk Universo (by Irokz)
-10. game9 = Sweden C&C Remix (Original by C418, remix by MrSuicideSheep)
+10. game9 = Moonlight Sonata 3rd Movement (Played with Marimba) (Arranged by me, original by Beethoven)
 11. boss1 = Paranoia (by Kentenshi)
 12. boss2 = Rush E (by Andrew Wrangell)
 13. fine = Cloud 9 (by Itro & Tobu)
