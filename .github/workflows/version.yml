@@ -2,7 +2,7 @@ name: Discord Comment Notif
 
 on:
   release: 
-    types: published
+    types: [published, created]
     
 jobs:
   notify:
@@ -12,4 +12,4 @@ jobs:
         uses: chase-roohms/discord-notify@v1
         with:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          content: "## New Version Released On ${{ github.repository }}: ${{ github.event.release.name }}!\nChangelog: ${{ github.event.release.html_url }}"
+          content: "## New Version Released On ${{ github.repository }}: ${{ github.event.release.name }}!\n${{ github.event.release.body }}"
